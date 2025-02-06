@@ -7,7 +7,7 @@ import Navbar from "./components/Navbar";
 import Dashboard from "./pages/Dashboard";
 import Alerts from "./pages/Alerts";
 import Login from "./pages/Login";
-
+import ServerStats from "./pages/ServerStats";
 
 function App() {
   const [count, setCount] = useState(0)
@@ -22,6 +22,7 @@ function App() {
               <Route path="/" element={<Dashboard />} />
               <Route path="/alerts" element={<Alerts />} />
               <Route path="/login" element={<Login />} />
+              <Route path="/server-stats" element={<ServerStats />} />
             </Routes>
           </div>
         </main>
