@@ -9,4 +9,143 @@
   padding: 2em;
 }
 
+/* Reset default styles */
+#root {
+  margin: 0;
+  padding: 0;
+  width: 100%;
+}
 
+/* Layout */
+.app-container {
+  min-height: 100vh;
+  background-color: rgb(249, 250, 251);
+}
+
+.main-content {
+  margin-left: 16rem;
+  padding-top: 4rem;
+  min-height: 100vh;
+}
+
+.content-wrapper {
+  padding: 1.5rem;
+}
+
+/* Navbar styles */
+.navbar {
+  position: fixed;
+  top: 0;
+  right: 0;
+  left: 0;
+  height: 4rem;
+  background-color: white;
+  border-bottom: 1px solid rgb(229, 231, 235);
+  z-index: 10;
+}
+
+.navbar-container {
+  height: 100%;
+  padding: 0 1.5rem;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.navbar-title {
+  font-size: 1.25rem;
+  font-weight: 600;
+  color: rgb(31, 41, 55);
+}
+
+.navbar-actions {
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+}
+
+.icon-button {
+  padding: 0.5rem;
+  border-radius: 9999px;
+  transition: background-color 0.2s;
+}
+
+.icon-button:hover {
+  background-color: rgb(243, 244, 246);
+}
+
+.icon {
+  color: rgb(75, 85, 99);
+}
+
+/* Dashboard styles */
+.dashboard {
+  padding: 1.5rem;
+}
+
+.dashboard-title {
+  font-size: 1.5rem;
+  font-weight: 700;
+  color: rgb(31, 41, 55);
+  margin-bottom: 1.5rem;
+}
+
+.metrics-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+  gap: 1.5rem;
+  margin-bottom: 2rem;
+}
+
+.metric-card {
+  background: white;
+  border-radius: 0.5rem;
+  padding: 1.5rem;
+  box-shadow: 0 1px 3px 0 rgba(0, 0, 0, 0.1);
+  border: 1px solid rgb(229, 231, 235);
+  transition: transform 0.2s, box-shadow 0.2s;
+}
+
+.metric-card:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.1);
+}
+
+.metric-title {
+  font-size: 0.875rem;
+  font-weight: 600;
+  color: rgb(107, 114, 128);
+  text-transform: uppercase;
+  letter-spacing: 0.05em;
+  margin-bottom: 0.5rem;
+}
+
+.metric-value {
+  font-size: 1.875rem;
+  font-weight: 700;
+  color: rgb(31, 41, 55);
+  display: flex;
+  align-items: baseline;
+  gap: 0.25rem;
+}
+
+.metric-unit {
+  font-size: 0.875rem;
+  color: rgb(107, 114, 128);
+}
+
+.metric-change {
+  display: flex;
+  align-items: center;
+  gap: 0.25rem;
+  margin-top: 0.5rem;
+  font-size: 0.875rem;
+}
+
+.metric-change.positive {
+  color: rgb(16, 185, 129);
+}
+
+.metric-change.negative {
+  color: rgb(239, 68, 68);
+}

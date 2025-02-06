@@ -1,9 +1,24 @@
-export default function MetricCard({ title, value, unit }) {
-    return (
-      <div className="border p-4 rounded-lg shadow-md bg-white">
-        <h3 className="text-lg font-semibold">{title}</h3>
-        <p className="text-2xl font-bold">{value} {unit}</p>
-      </div>
-    );
-  }
+export default function MetricCard({ title, value, unit, change, icon }) {
+  const isPositive = change > 0;
   
+  return (
+    <div className="metric-card">
+      <div className="metric-title">
+        {icon && <span className="material-icons icon mr-1">{icon}</span>}
+        {title}
+      </div>
+      <div className="metric-value">
+        {value.toFixed(1)}
+        <span className="metric-unit">{unit}</span>
+      </div>
+      {change !== undefined && (
+        <div className={`metric-change ${isPositive ? 'positive' : 'negative'}`}>
+          <span className="material-icons">
+            {isPositive ? 'trending_up' : 'trending_down'}
+          </span>
+          <span>{Math.abs(change)}% from last hour</span>
+        </div>
+      )}
+    </div>
+  );
+}
